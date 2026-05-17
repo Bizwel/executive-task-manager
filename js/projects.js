@@ -90,6 +90,30 @@ function renderProjects(){
         </button>
 
       </td>
+
+      <td>
+
+  <input
+    type="checkbox"
+    ${project.completed ? 'checked' : ''}
+    onchange="toggleProject(${project.id})"
+  />
+
+  <span class="${
+    project.completed
+    ? 'status-complete'
+    : 'status-pending'
+  }">
+
+    ${
+      project.completed
+      ? 'Completed'
+      : 'In Progress'
+    }
+
+  </span>
+
+</td>
     `;
 
     projectTableBody.appendChild(row);
