@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tasks</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+
+<div class="container">
+
+  <aside class="sidebar">
+
+    <h2>TaskFlow</h2>
+
+    <nav>
+
+      <a href="index.html" class="menu-link">
+        Dashboard
+      </a>
+
+      <a href="tasks.html" class="menu-link active">
+        Tasks
+      </a>
+
+      <a href="projects.html" class="menu-link">
+        Projects
+      </a>
+
+      <a href="reports.html" class="menu-link">
+        Reports
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <h1>Task Management</h1>
+    </header>
+
+    <!-- Form -->
+    <section class="task-form-container">
+
+      <h2>Create Task</h2>
+
+      <form id="taskForm">
+
+        <div class="grid">
+
+          <input type="text" id="header" placeholder="Header" required>
+
+          <input type="text" id="item" placeholder="Task Item" required>
+
+          <input type="text" id="assignedTo" placeholder="Assigned To">
+
+          <input type="date" id="startDate">
+
+          <input type="date" id="endDate">
+
+        </div>
+
+        <textarea
+          id="description"
+          placeholder="Description"
+        ></textarea>
+
+        <button type="submit" class="primary-btn">
+          Add Task
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- Table -->
+    <section class="table-section">
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Header</th>
+            <th>Item</th>
+            <th>Assigned To</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+
+        </thead>
+
+        <tbody id="taskTableBody"></tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="js/tasks.js"></script>
+
+</body>
+</html>
