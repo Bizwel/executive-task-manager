@@ -72,3 +72,17 @@ body {
   font-size: 12px;
   padding: 3px 7px;
 }
+
+.menu-link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-link:hover,
+.menu-link.active {
+  background: #2563eb;
+}
