@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Projects</title>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
 </head>
 
 <body>
 
 <div class="container">
+
+  <!-- Sidebar -->
 
   <aside class="sidebar">
 
@@ -20,18 +30,22 @@
     <nav>
 
       <a href="index.html" class="menu-link">
+        <i class="fa-solid fa-chart-line"></i>
         Dashboard
       </a>
 
       <a href="tasks.html" class="menu-link">
+        <i class="fa-solid fa-list-check"></i>
         Tasks
       </a>
 
       <a href="projects.html" class="menu-link active">
+        <i class="fa-solid fa-diagram-project"></i>
         Projects
       </a>
 
       <a href="reports.html" class="menu-link">
+        <i class="fa-solid fa-chart-pie"></i>
         Reports
       </a>
 
@@ -39,33 +53,106 @@
 
   </aside>
 
+  <!-- Main -->
+
   <main class="main-content">
 
-    <header class="topbar">
-      <h1>Projects</h1>
-    </header>
+    <div class="page-content">
 
-    <section class="table-section">
+      <!-- Header -->
 
-      <table>
+      <header class="topbar">
 
-        <thead>
+        <div>
+          <h1>Project Management</h1>
+          <p>Create and manage executive projects</p>
+        </div>
 
-          <tr>
-            <th>Project</th>
-            <th>Description</th>
-            <th>Owner</th>
-            <th>Deadline</th>
-            <th>Status</th>
-          </tr>
+      </header>
 
-        </thead>
+      <!-- Project Form -->
 
-        <tbody id="projectTableBody"></tbody>
+      <section class="task-form-container">
 
-      </table>
+        <h2>Create Project</h2>
 
-    </section>
+        <form id="projectForm">
+
+          <div class="grid">
+
+            <input
+              type="text"
+              id="projectName"
+              placeholder="Project Name"
+              required
+            >
+
+            <input
+              type="text"
+              id="projectOwner"
+              placeholder="Project Owner"
+              required
+            >
+
+            <input
+              type="date"
+              id="projectStartDate"
+              required
+            >
+
+            <input
+              type="date"
+              id="projectEndDate"
+              required
+            >
+
+          </div>
+
+          <textarea
+            id="projectDescription"
+            placeholder="Project Description"
+          ></textarea>
+
+          <button type="submit" class="primary-btn">
+
+            <i class="fa-solid fa-plus"></i>
+            Add Project
+
+          </button>
+
+        </form>
+
+      </section>
+
+      <!-- Project Table -->
+
+      <section class="table-section">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>Project</th>
+              <th>Description</th>
+              <th>Owner</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Status</th>
+              <th>Action</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody id="projectTableBody"></tbody>
+
+        </table>
+
+      </section>
+
+    </div>
 
   </main>
 
